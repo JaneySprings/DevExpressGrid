@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxg="http://schemas.devexpress.com/xamarin/2014/forms/datagrid"
+             x:Class="DevExpressGrid.MainPage">
+
+    <StackLayout>
+        <StackLayout BackgroundColor="#2196F3" Padding="16" Orientation="Horizontal">
+            <Label Text="Facebook" HorizontalTextAlignment="Start" TextColor="White" FontSize="Title" VerticalTextAlignment="Center"/>
+            <Button BackgroundColor="#0000" TextColor="#ffffff" Text="Add" VerticalOptions="Center" x:Name="addButton"/>
+        </StackLayout>
+
+        <dxg:DataGridView x:Name="gridLayout"
+             BorderColor="Red"
+             IndicatorColor="DarkGray"
+             ColumnHeaderHeight="0">
+
+            <dxg:DataGridView.EndSwipeItems>
+                <dxg:SwipeItem Caption="Delete" BackgroundColor="#ff3b30"
+                           Tap="SwipeItem_Tap"/>
+            </dxg:DataGridView.EndSwipeItems>
+
+            <dxg:DataGridView.AdvancedColumnLayout>
+                <dxg:AdvancedColumnLayout>
+                    <dxg:AdvancedColumnLayout.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </dxg:AdvancedColumnLayout.ColumnDefinitions>
+                    <dxg:AdvancedColumnLayout.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                    </dxg:AdvancedColumnLayout.RowDefinitions>
+                </dxg:AdvancedColumnLayout>
+            </dxg:DataGridView.AdvancedColumnLayout>
+
+            <dxg:ImageColumn FieldName="src"
+                        RowSpan="2"/>
+            
+            <dxg:TextColumn FieldName="fullName" 
+                       Column="1"
+                       FontAttributes="Bold"
+                       FontSize="Subtitle"
+                       FontColor="Black"
+                       HorizontalContentAlignment="Start"/>
+
+            <dxg:TextColumn FieldName="jobTitle" 
+                       Column="1"
+                       Row="1"
+                       ColumnSpan="2"
+                       FontColor="Gray"
+                       HorizontalContentAlignment="Start"/>
+
+            <dxg:NumberColumn FieldName="id" 
+                       Caption="Identity" 
+                       FontColor="#a0a0a0"
+                       HorizontalContentAlignment="End"/>
+
+
+            <!--<dxg:DataGridView.Columns>
+                
+                
+                
+
+            </dxg:DataGridView.Columns>-->
+        </dxg:DataGridView>
+    </StackLayout>
+
+</ContentPage>
