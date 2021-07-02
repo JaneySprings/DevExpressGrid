@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:dxdf="http://schemas.devexpress.com/xamarin/2014/forms/dataform"
+             x:Class="DevExpressGrid.ui.ProfilePage">
+
+    <NavigationPage.TitleView>
+        <Label x:Name="tag" MaxLines="1" HorizontalOptions="Start" TextColor="White" FontSize="22"/>
+    </NavigationPage.TitleView>
+
+    <ScrollView BackgroundColor="White">
+        <StackLayout>
+            <Frame Padding="1" Margin="0,16,0,0"
+                       HorizontalOptions="Center"
+                       BorderColor="#dadada"
+                       WidthRequest="160"
+                       HeightRequest="160"
+                       CornerRadius="80"
+                       IsClippedToBounds="True">
+                <Image x:Name="photo"
+                           Aspect="AspectFill"/>
+            </Frame>
+            <Label x:Name="title" HorizontalOptions="Center" Margin="16,0,16,0" FontSize="22" FontAttributes="Bold" TextColor="Black"/>
+            <dxdf:DataFormView x:Name="dataForm" 
+                    EditorLabelWidth="40"
+                    CommitMode="LostFocus"
+                    EditorLabelColor="#0000"
+                    GroupHeaderBackgroundColor="#F0F0F0"
+                    GroupHeaderTextColor="Black">
+            </dxdf:DataFormView>
+            <Button Text="Commit" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

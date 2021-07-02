@@ -1,2 +1,2 @@
-AdbTarget=-s 710HVBR222LA2
+AdbTarget=-s emulator-5554
 AdbOptions=

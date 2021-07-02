@@ -59,6 +59,9 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="DevExpress.XamarinForms.Editors">
+      <Version>21.1.4</Version>
+    </PackageReference>
     <PackageReference Include="DevExpress.XamarinForms.Grid">
       <Version>21.1.4</Version>
     </PackageReference>
@@ -92,13 +95,22 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
+    <AndroidResource Include="Resources\drawable\ic_facebook_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevExpressGrid\DevExpressGrid.csproj">
       <Project>{B47F6B8F-A256-4EFE-B6F3-77879EFFA899}</Project>
       <Name>DevExpressGrid</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_birth.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

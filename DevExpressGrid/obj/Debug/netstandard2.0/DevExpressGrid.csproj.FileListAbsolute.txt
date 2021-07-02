@@ -12,3 +12,4 @@ C:\Users\student21\source\repos\DevExpressGrid\DevExpressGrid\obj\Debug\netstand
 C:\Users\student21\source\repos\DevExpressGrid\DevExpressGrid\obj\Debug\netstandard2.0\ref\DevExpressGrid.dll
 C:\Users\student21\source\repos\DevExpressGrid\DevExpressGrid\obj\Debug\netstandard2.0\DevExpressGrid.pdb
 C:\Users\student21\source\repos\DevExpressGrid\DevExpressGrid\obj\Debug\netstandard2.0\DevExpressGrid.csproj.AssemblyReference.cache
+C:\Users\student21\source\repos\DevExpressGrid\DevExpressGrid\obj\Debug\netstandard2.0\ui\ProfilePage.xaml.g.cs

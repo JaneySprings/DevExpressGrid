@@ -1091,6 +1091,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "DevExpress.XamarinForms.Editors": "21.1.4",
           "DevExpress.XamarinForms.Grid": "21.1.4",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012"
@@ -2373,6 +2374,7 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v11.0": [
+      "DevExpress.XamarinForms.Editors >= 21.1.4",
       "DevExpress.XamarinForms.Grid >= 21.1.4",
       "DevExpressGrid >= 1.0.0",
       "Xamarin.Essentials >= 1.6.1",
@@ -2422,6 +2424,10 @@
     "frameworks": {
       "monoandroid11.0": {
         "dependencies": {
+          "DevExpress.XamarinForms.Editors": {
+            "target": "Package",
+            "version": "[21.1.4, )"
+          },
           "DevExpress.XamarinForms.Grid": {
             "target": "Package",
             "version": "[21.1.4, )"

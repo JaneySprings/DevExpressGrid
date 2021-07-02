@@ -6,17 +6,18 @@ using System.Net;
 using System.Runtime.Serialization.Json;
 
 namespace DevExpressGrid.network {
-    class DevExpressApi {
-        //https://js.devexpress.com/Demos/SalesViewer/odata/DaySaleDtoes
+    static class DevExpressApi {
 
-        /* TODO */
-        private const string BASE_URL = "https://vk.com/doc474604959_603599666?hash=56a52821f5a63bc9fe&dl=GQ3TINRQGQ4TKOI:1625135720:fdc4b81f6d57b0630b&api=1&no_preview=1";
-        private ObservableCollection<Employee> response = new ObservableCollection<Employee>();
+        /* Old task -> https://js.devexpress.com/Demos/SalesViewer/odata/DaySaleDtoes */
+        /* TODO: VK update media hash after 24h */
+        private const string BASE_URL = "https://vk.com/doc474604959_603599666?hash=c3e3bd5e5cfc222e35&dl=GQ3TINRQGQ4TKOI:1625230011:dd7a9e62b179cf876c&api=1&no_preview=1";
+        private static ObservableCollection<Employee> response = new ObservableCollection<Employee>();
 
         /* Set listener for network request */
-        public ObservableCollection<Employee> provideObservable() { return response; }
+        public static ObservableCollection<Employee> provideObservable() { return response; }
 
-        public async void requestSalesViewer() {
+        /* Load data from database */
+        public static async void requestSalesViewer() {
             using (WebClient webClient = new WebClient()) {
                 try {
                     Uri uri = new Uri(BASE_URL);
@@ -34,9 +35,19 @@ namespace DevExpressGrid.network {
             }
         }
 
-        public interface IResponseListener {
-            void onSuccess(EmployeesDTO response);
-            void onError(string error);
+        /* Get data from position */
+        public static Employee getItemByPosition(int position) {
+            return response.Count != 0 ? response[position] : null;
+        }
+
+        /* Update element */
+        public static void updateElement(Employee item) {
+            for (int i = 0; i < response.Count; i++) { 
+                if (response[i].id == item.id) {
+                    response[i] = item;
+                    break;
+                }
+            }
         }
     }
 }

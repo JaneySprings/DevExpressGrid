@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "DevExpressGrid/1.0.0": {
         "dependencies": {
+          "DevExpress.XamarinForms.Editors": "21.1.4",
           "DevExpress.XamarinForms.Grid": "21.1.4",
           "NETStandard.Library": "2.0.3",
           "Xamarin.Essentials": "1.6.1",

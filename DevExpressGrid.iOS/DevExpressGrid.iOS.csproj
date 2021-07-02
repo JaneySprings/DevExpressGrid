@@ -123,6 +123,9 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="DevExpress.XamarinForms.Editors">
+      <Version>21.1.4</Version>
+    </PackageReference>
     <PackageReference Include="DevExpress.XamarinForms.Grid">
       <Version>21.1.4</Version>
     </PackageReference>

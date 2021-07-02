@@ -691,3 +691,7 @@ C:\Users\student21\source\repos\DevExpressGrid\DevExpressGrid.Android\obj\Debug\
 C:\Users\student21\source\repos\DevExpressGrid\DevExpressGrid.Android\obj\Debug\110\android\src\mono\com\devexpress\editors\OnTextChangedListenerImplementor.java
 C:\Users\student21\source\repos\DevExpressGrid\DevExpressGrid.Android\obj\Debug\110\android\src\mono\com\devexpress\editors\SelectionChangedListenerImplementor.java
 C:\Users\student21\source\repos\DevExpressGrid\DevExpressGrid.Android\obj\Debug\110\android\src\mono\com\devexpress\editors\TimeEdit_TimeChangedListenerImplementor.java
+C:\Users\student21\source\repos\DevExpressGrid\DevExpressGrid.Android\obj\Debug\110\res\drawable\ic_add.png
+C:\Users\student21\source\repos\DevExpressGrid\DevExpressGrid.Android\obj\Debug\110\res\drawable\ic_facebook_logo.png
+C:\Users\student21\source\repos\DevExpressGrid\DevExpressGrid.Android\obj\Debug\110\res\drawable\ic_name.png
+C:\Users\student21\source\repos\DevExpressGrid\DevExpressGrid.Android\obj\Debug\110\res\drawable\ic_birth.png

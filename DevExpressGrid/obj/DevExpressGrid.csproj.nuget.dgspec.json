@@ -46,6 +46,10 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "DevExpress.XamarinForms.Editors": {
+              "target": "Package",
+              "version": "[21.1.4, )"
+            },
             "DevExpress.XamarinForms.Grid": {
               "target": "Package",
               "version": "[21.1.4, )"
