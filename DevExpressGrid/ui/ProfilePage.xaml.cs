@@ -1,40 +1,29 @@
-﻿using DevExpressGrid.local;
-using DevExpressGrid.network;
+﻿using DevExpressGrid.network;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using DevExpressGrid.domain;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using DevExpressGrid.extensions;
 
 namespace DevExpressGrid.ui {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProfilePage : ContentPage {
-        private Employee user = null;
+        private ProfileViewModel viewModel;
+        private IResultListener listener;
+        
 
-
-        public ProfilePage(Employee user) {
+        public ProfilePage(EmployeeItem item, IResultListener listener) {
             InitializeComponent();
 
-            this.user = user;
-        }
+            viewModel = new ProfileViewModel(item);
+            BindingContext = viewModel;
 
-        protected override void OnAppearing() {
-            base.OnAppearing();
-
-            tag.Text = "#" + user.firstName;
-
-            photo.Source = user.image;
-            title.Text = user.fullName;
-
-            dataForm.DataObject = user;
+            this.listener = listener;
         }
 
 
         private void Button_Clicked(object sender, EventArgs e) {
-            DevExpressApi.updateElement((Employee)(dataForm.DataObject));
+            listener.onPageResult(viewModel.Item, ResultApiCodes.Delete);
             Navigation.PopAsync();
         }
     }

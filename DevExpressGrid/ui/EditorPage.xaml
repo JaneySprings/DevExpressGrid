@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DevExpressGrid.ui.EditorPage">
+
+    <NavigationPage.TitleView>
+        <Label 
+            Text="Create new account"
+            MaxLines= "1" 
+            HorizontalOptions="Start" 
+            TextColor="White"
+            FontSize="22"/>
+    </NavigationPage.TitleView>
+
+    <StackLayout>
+        <Image x:Name="photo"
+            Source="{Binding ImageSrc}"  
+            HeightRequest="250"
+            Aspect="AspectFill"/>
+        <Entry 
+            x:Name="editText"
+            Margin="16"
+            Placeholder="Enter name here"/>
+        <StackLayout Orientation="Horizontal">
+            <Button  
+                Text="Create!" 
+                TextColor="White"
+                Background="#2196F3" 
+                Margin="16"
+                Padding="32,0,32,0"
+                Clicked="Button_Clicked"
+                CornerRadius="32"/>
+            
+            <Button  
+                Text="Pick photo" 
+                TextColor="Gray"
+                Background="#E0E0E0" 
+                Margin="0,16,0,16"
+                Padding="32,0,32,0"
+                Clicked="Button2_Clicked"
+                CornerRadius="32"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

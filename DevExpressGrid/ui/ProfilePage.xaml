@@ -5,30 +5,39 @@
              x:Class="DevExpressGrid.ui.ProfilePage">
 
     <NavigationPage.TitleView>
-        <Label x:Name="tag" MaxLines="1" HorizontalOptions="Start" TextColor="White" FontSize="22"/>
+        <Label 
+            Text="{Binding Title}"
+            MaxLines= "1" 
+            HorizontalOptions="Start" 
+            TextColor="White"
+            FontSize="22"/>
     </NavigationPage.TitleView>
 
     <ScrollView BackgroundColor="White">
         <StackLayout>
-            <Frame Padding="1" Margin="0,16,0,0"
-                       HorizontalOptions="Center"
-                       BorderColor="#dadada"
-                       WidthRequest="160"
-                       HeightRequest="160"
-                       CornerRadius="80"
-                       IsClippedToBounds="True">
-                <Image x:Name="photo"
-                           Aspect="AspectFill"/>
-            </Frame>
-            <Label x:Name="title" HorizontalOptions="Center" Margin="16,0,16,0" FontSize="22" FontAttributes="Bold" TextColor="Black"/>
-            <dxdf:DataFormView x:Name="dataForm" 
-                    EditorLabelWidth="40"
-                    CommitMode="LostFocus"
-                    EditorLabelColor="#0000"
-                    GroupHeaderBackgroundColor="#F0F0F0"
-                    GroupHeaderTextColor="Black">
+            <Image 
+                Source="{Binding ImageSrc}"  
+                HeightRequest="250"
+                Aspect="AspectFill"/>
+            <dxdf:DataFormView 
+               
+                EditorLabelPosition="Top"
+                EditorLabelFontAttributes="Bold"
+                EditorLabelWidth="*"
+                EditorPadding="0,8,0,8"
+                DataObject="{Binding Item}"
+                CommitMode="LostFocus"
+                EditorLabelColor="#9A9A9A"
+                GroupHeaderBackgroundColor="#F0F0F0" 
+                GroupHeaderTextColor="Black">
             </dxdf:DataFormView>
-            <Button Text="Commit" Clicked="Button_Clicked"/>
+            <Button 
+                Text="Commit" 
+                TextColor="White"
+                Clicked="Button_Clicked"
+                Background="#2196F3" 
+                Margin="64,16,64,32" 
+                CornerRadius="32"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
