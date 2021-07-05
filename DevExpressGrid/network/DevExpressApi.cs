@@ -4,21 +4,21 @@ using System.Net;
 using System.Runtime.Serialization.Json;
 using System.Threading.Tasks;
 
-namespace DevExpressGrid.network {
+namespace DevExpressGrid.Network {
     public class DevExpressApi {
         /* Repo:[https://raw.githubusercontent.com/JaneySprings/DevExpressGrid]
          * Path:[DevExpressGrid/local/data.json]
          */
         private const string BASE_URL = "https://raw.githubusercontent.com/JaneySprings/DevExpressGrid/main/DevExpressGrid/local/data.json";
-        private IRequestStateListener listener;
+        private readonly IRequestStateListener listener;
 
         public DevExpressApi(IRequestStateListener listener) {
-            this.listener = listener; 
+            this.listener = listener;
         }
 
         /* Load data from database */
-        public async Task<EmployeesDTO> requestEmployees() {
-            listener.onStateChanged(LoadStates.Loading);
+        public async Task<EmployeesDTO> RequestEmployees() {
+            this.listener.OnStateChanged(LoadStates.Loading);
 
             using (WebClient webClient = new WebClient()) {
                 try {
@@ -26,22 +26,21 @@ namespace DevExpressGrid.network {
                     byte[] data = await webClient.DownloadDataTaskAsync(uri);
 
                     using (Stream stream = new MemoryStream(data)) {
-                        listener.onStateChanged(LoadStates.Success);
+                        this.listener.OnStateChanged(LoadStates.Success);
 
-                        var jsonSerializer = new DataContractJsonSerializer(typeof(EmployeesDTO));
+                        DataContractJsonSerializer jsonSerializer = new DataContractJsonSerializer(typeof(EmployeesDTO));
                         return (EmployeesDTO)jsonSerializer.ReadObject(stream);
                     }
-                }
-                catch(WebException exception) {
+                } catch (WebException exception) {
                     Console.WriteLine("EXCEPTION: " + exception.Message);
-                    listener.onStateChanged(LoadStates.Error);
-                    return null; 
+                    this.listener.OnStateChanged(LoadStates.Error);
+                    return null;
                 }
             }
         }
 
         public interface IRequestStateListener {
-            void onStateChanged(LoadStates state);
+            void OnStateChanged(LoadStates state);
         }
 
         public enum LoadStates { Success, Loading, Error }

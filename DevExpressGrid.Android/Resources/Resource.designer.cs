@@ -19606,97 +19606,97 @@ namespace DevExpressGrid.Droid
 			public const int abc_vector_test = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int autofill_inline_suggestion_chip_background = 2131165284;
+			public const int add = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int avd_hide_password = 2131165285;
+			public const int autofill_inline_suggestion_chip_background = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int avd_show_password = 2131165286;
+			public const int avd_hide_password = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int btn_checkbox_checked_mtrl = 2131165287;
+			public const int avd_show_password = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int btn_checkbox_checked_to_unchecked_mtrl_animation = 2131165288;
+			public const int btn_checkbox_checked_mtrl = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int btn_checkbox_unchecked_mtrl = 2131165289;
+			public const int btn_checkbox_checked_to_unchecked_mtrl_animation = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int btn_checkbox_unchecked_to_checked_mtrl_animation = 2131165290;
+			public const int btn_checkbox_unchecked_mtrl = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int btn_radio_off_mtrl = 2131165291;
+			public const int btn_checkbox_unchecked_to_checked_mtrl_animation = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int btn_radio_off_to_on_mtrl_animation = 2131165292;
+			public const int btn_radio_off_mtrl = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int btn_radio_on_mtrl = 2131165293;
+			public const int btn_radio_off_to_on_mtrl_animation = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int btn_radio_on_to_off_mtrl_animation = 2131165294;
+			public const int btn_radio_on_mtrl = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int design_bottom_navigation_item_background = 2131165295;
+			public const int btn_radio_on_to_off_mtrl_animation = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int design_fab_background = 2131165296;
+			public const int design_bottom_navigation_item_background = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int design_ic_visibility = 2131165297;
+			public const int design_fab_background = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int design_ic_visibility_off = 2131165298;
+			public const int design_ic_visibility = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int design_password_eye = 2131165299;
+			public const int design_ic_visibility_off = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int design_snackbar_background = 2131165300;
-			
-			// aapt resource value: 0x7F070078
-			public const int dxcheckbox = 2131165304;
+			public const int design_password_eye = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int dx_check_box_checked = 2131165301;
-			
-			// aapt resource value: 0x7F070076
-			public const int dx_check_box_unchecked = 2131165302;
-			
-			// aapt resource value: 0x7F070077
-			public const int dx_check_box_undetermined = 2131165303;
+			public const int design_snackbar_background = 2131165301;
 			
 			// aapt resource value: 0x7F070079
-			public const int grid_clearicon = 2131165305;
+			public const int dxcheckbox = 2131165305;
+			
+			// aapt resource value: 0x7F070076
+			public const int dx_check_box_checked = 2131165302;
+			
+			// aapt resource value: 0x7F070077
+			public const int dx_check_box_unchecked = 2131165303;
+			
+			// aapt resource value: 0x7F070078
+			public const int dx_check_box_undetermined = 2131165304;
 			
 			// aapt resource value: 0x7F07007A
-			public const int grid_dateicon = 2131165306;
+			public const int grid_clearicon = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int grid_dropdown = 2131165307;
+			public const int grid_dateicon = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int grid_dropup = 2131165308;
+			public const int grid_dropdown = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int grid_erroricon = 2131165309;
+			public const int grid_dropup = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int grid_minusicon = 2131165310;
+			public const int grid_erroricon = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int grid_plusicon = 2131165311;
+			public const int grid_minusicon = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int grid_searchicon = 2131165312;
+			public const int grid_plusicon = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int grid_timeicon = 2131165313;
+			public const int grid_searchicon = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int ic_add = 2131165314;
+			public const int grid_timeicon = 2131165314;
 			
 			// aapt resource value: 0x7F070083
 			public const int ic_birth = 2131165315;
@@ -19759,67 +19759,67 @@ namespace DevExpressGrid.Droid
 			public const int ic_error = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int ic_facebook_logo = 2131165335;
+			public const int ic_filter = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int ic_filter = 2131165336;
+			public const int ic_group_down_24dp = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int ic_group_down_24dp = 2131165337;
+			public const int ic_group_up_24dp = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int ic_group_up_24dp = 2131165338;
+			public const int ic_minus = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int ic_minus = 2131165339;
+			public const int ic_mtrl_checked_circle = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int ic_mtrl_checked_circle = 2131165340;
+			public const int ic_mtrl_chip_checked_black = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int ic_mtrl_chip_checked_black = 2131165341;
+			public const int ic_mtrl_chip_checked_circle = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int ic_mtrl_chip_checked_circle = 2131165342;
+			public const int ic_mtrl_chip_close_circle = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int ic_mtrl_chip_close_circle = 2131165343;
+			public const int ic_name = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int ic_name = 2131165344;
+			public const int ic_plus = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int ic_plus = 2131165345;
+			public const int ic_search = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int ic_search = 2131165346;
+			public const int ic_size_l = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int ic_size_l = 2131165347;
+			public const int ic_size_m = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int ic_size_m = 2131165348;
+			public const int ic_size_s = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int ic_size_s = 2131165349;
+			public const int ic_sorting_down_24dp = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int ic_sorting_down_24dp = 2131165350;
+			public const int ic_sorting_up_24dp = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int ic_sorting_up_24dp = 2131165351;
+			public const int ic_time_picker = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int ic_time_picker = 2131165352;
+			public const int ic_visibility = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int ic_visibility = 2131165353;
+			public const int ic_visibility_off = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int ic_visibility_off = 2131165354;
+			public const int ic_visibility_on = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int ic_visibility_on = 2131165355;
+			public const int logo = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
 			public const int material_ic_calendar_black_24dp = 2131165356;

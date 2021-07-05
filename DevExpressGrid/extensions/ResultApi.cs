@@ -1,12 +1,9 @@
-﻿using DevExpressGrid.network;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using DevExpressGrid.Network;
 
-namespace DevExpressGrid.extensions {
-    /* Return result after page pop-up */
+namespace DevExpressGrid.Extensions {
+
     public interface IResultListener {
-        void onPageResult(EmployeeItem item, ResultApiCodes arg);
+        void OnPageResult(EmployeeItem item, ResultApiCodes arg);
     }
 
     public enum ResultApiCodes { Delete, Create }

@@ -1,74 +1,67 @@
-﻿using DevExpressGrid.network;
+﻿using DevExpressGrid.Network;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
-namespace DevExpressGrid.domain {
+namespace DevExpressGrid.Domain {
     class MainViewModel: DevExpressApi.IRequestStateListener, INotifyPropertyChanged {
-        private ObservableCollection<EmployeeItem> employeeItems = new ObservableCollection<EmployeeItem>();
-        public ObservableCollection<EmployeeItem> EmployeeItems {
-            get { return employeeItems; }
-        }
+        public ObservableCollection<EmployeeItem> EmployeeItems { get; } = new ObservableCollection<EmployeeItem>();
 
-        private DevExpressApi apiProvider;
+        private readonly DevExpressApi apiProvider;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
         private string pageTitle = "";
         public string PageTitle {
-            get { return pageTitle; }
-            set { 
-                pageTitle = value;
+            get => this.pageTitle;
+            set {
+                this.pageTitle = value;
                 OnPropertyChanged("PageTitle");
             }
         }
 
         private bool isLoading = false;
         public bool IsLoading {
-            get { return isLoading; }
+            get => this.isLoading;
             set {
-                isLoading = value;
+                this.isLoading = value;
                 OnPropertyChanged("IsLoading");
             }
         }
 
 
-        public MainViewModel() { 
-            apiProvider = new DevExpressApi(this); 
+        public MainViewModel() {
+            this.apiProvider = new DevExpressApi(this);
         }
 
-        /* Get users from network */
-        public async void requestEmployees() {
-            if (employeeItems.Count == 0) {
-                var result = await apiProvider.requestEmployees();
+        public async void RequestEmployees() {
+            if (EmployeeItems.Count == 0) {
+                EmployeesDTO result = await this.apiProvider.RequestEmployees();
 
                 foreach (Employee model in result.employees) {
-                    employeeItems.Add(new EmployeeItem(model));
+                    EmployeeItems.Add(new EmployeeItem(model));
                 }
             }
         }
-        /* Delete user from list */
-        public void removeItem(int position) {
-            if (position >= 0 && position < employeeItems.Count) {
-                employeeItems.RemoveAt(position);
+        public void RemoveItem(int position) {
+            if (position >= 0 && position < EmployeeItems.Count) {
+                EmployeeItems.RemoveAt(position);
             }
         }
-        /* Replave user from result */
-        public void replaceItem(EmployeeItem item) {
-            for (int i = 0; i < employeeItems.Count; i++) {
-                if (employeeItems[i].id == item.id) {
-                    employeeItems[i] = item;
+        public void ReplaceItem(EmployeeItem item) {
+            for (int i = 0; i < EmployeeItems.Count; i++) {
+                if (EmployeeItems[i].id == item.id) {
+                    EmployeeItems[i] = item;
                     return;
                 }
             }
         }
-        /* Add new item to top */
-        public void addItem(EmployeeItem item) {
-            employeeItems.Insert(0, item);
+        public void AddItem(EmployeeItem item) {
+            EmployeeItems.Insert(0, item);
         }
 
 
 
-        public void onStateChanged(DevExpressApi.LoadStates state) {
+        public void OnStateChanged(DevExpressApi.LoadStates state) {
             if (state == DevExpressApi.LoadStates.Success) {
                 PageTitle = "Facebook";
                 IsLoading = false;
@@ -82,9 +75,7 @@ namespace DevExpressGrid.domain {
         }
 
         protected void OnPropertyChanged(string propName) {
-            if (PropertyChanged != null) {
-                PropertyChanged(this, new PropertyChangedEventArgs(propName));
-            } 
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
         }
     }
 }

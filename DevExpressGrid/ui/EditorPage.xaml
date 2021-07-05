@@ -1,15 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DevExpressGrid.ui.EditorPage">
+             x:Class="DevExpressGrid.UI.EditorPage">
 
     <NavigationPage.TitleView>
         <Label 
             Text="Create new account"
             MaxLines= "1" 
+            FontAttributes="Bold"
             HorizontalOptions="Start" 
             TextColor="White"
-            FontSize="22"/>
+            FontSize="24"/>
     </NavigationPage.TitleView>
 
     <StackLayout>
@@ -29,7 +30,7 @@
                 Margin="16"
                 Padding="32,0,32,0"
                 Clicked="Button_Clicked"
-                CornerRadius="32"/>
+                CornerRadius="20"/>
             
             <Button  
                 Text="Pick photo" 
@@ -38,7 +39,7 @@
                 Margin="0,16,0,16"
                 Padding="32,0,32,0"
                 Clicked="Button2_Clicked"
-                CornerRadius="32"/>
+                CornerRadius="20"/>
         </StackLayout>
     </StackLayout>
 </ContentPage>

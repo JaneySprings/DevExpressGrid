@@ -5,7 +5,7 @@ using System.IO;
 using System.Runtime.Serialization;
 using Xamarin.Forms;
 
-namespace DevExpressGrid.network {
+namespace DevExpressGrid.Network {
 
     [DataContract]
     public class EmployeesDTO {
@@ -69,7 +69,6 @@ namespace DevExpressGrid.network {
         public string image;
     }
 
-    /* Model for displaying info */
     public class EmployeeItem {
         public int id;
 
@@ -99,7 +98,7 @@ namespace DevExpressGrid.network {
 
         [DataFormDisplayOptions(GroupName = "Profile")]
         public DateTime Birthday { get; set; }
-        
+
         [DataFormDisplayOptions(GroupName = "Profile")]
         public GenderStates Gender { get; set; }
 
@@ -120,7 +119,7 @@ namespace DevExpressGrid.network {
         }
 
         public EmployeeItem(Employee data) {
-            id = data.id;
+            this.id = data.id;
             Job = data.jobTitle;
             Group = data.groupName;
             Phone = data.phone;
@@ -136,7 +135,7 @@ namespace DevExpressGrid.network {
 
             FullName = data.firstName + " " + data.lastName;
             ImageSrc = ImageSource.FromStream(() => {
-                var bytes = Convert.FromBase64String(data.image);
+                byte[] bytes = Convert.FromBase64String(data.image);
                 return new MemoryStream(bytes);
             });
         }

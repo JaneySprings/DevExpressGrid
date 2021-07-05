@@ -2,15 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:dxdf="http://schemas.devexpress.com/xamarin/2014/forms/dataform"
-             x:Class="DevExpressGrid.ui.ProfilePage">
+             x:Class="DevExpressGrid.UI.ProfilePage">
 
     <NavigationPage.TitleView>
         <Label 
             Text="{Binding Title}"
             MaxLines= "1" 
             HorizontalOptions="Start" 
+            FontAttributes="Bold"
             TextColor="White"
-            FontSize="22"/>
+            FontSize="24"/>
     </NavigationPage.TitleView>
 
     <ScrollView BackgroundColor="White">
@@ -37,7 +38,7 @@
                 Clicked="Button_Clicked"
                 Background="#2196F3" 
                 Margin="64,16,64,32" 
-                CornerRadius="32"/>
+                CornerRadius="20"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>

@@ -1,29 +1,22 @@
-﻿using DevExpressGrid.network;
-using System;
-using System.Collections.Generic;
+﻿using DevExpressGrid.Network;
 using System.ComponentModel;
-using System.Text;
 using Xamarin.Forms;
 
-namespace DevExpressGrid.domain {
+namespace DevExpressGrid.Domain {
     public class ProfileViewModel: INotifyPropertyChanged {
         public event PropertyChangedEventHandler PropertyChanged;
 
         private EmployeeItem item = null;
 
         public EmployeeItem Item {
-            get { return item; }
-            set { 
-                item = value;
+            get => this.item;
+            set {
+                this.item = value;
                 OnPropertyChanged("Item");
             }
         }
-        public ImageSource ImageSrc {
-            get { return item.ImageSrc; }
-        }
-        public string Title {
-            get { return item.FullName; }
-        }
+        public ImageSource ImageSrc => this.item.ImageSrc;
+        public string Title => this.item.FullName;
 
         public ProfileViewModel(EmployeeItem item) {
             this.item = item;
@@ -31,9 +24,7 @@ namespace DevExpressGrid.domain {
 
 
         protected void OnPropertyChanged(string propName) {
-            if (PropertyChanged != null) {
-                PropertyChanged(this, new PropertyChangedEventArgs(propName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
         }
     }
 }

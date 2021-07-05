@@ -7,7 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevExpressGrid.Android", "D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevExpressGrid.iOS", "DevExpressGrid.iOS\DevExpressGrid.iOS.csproj", "{544E20DF-C87E-430A-B775-2205C90FAFE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevExpressGrid", "DevExpressGrid\DevExpressGrid.csproj", "{2F81D54D-2EE3-4930-B25D-319FCB647F8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevExpressGrid", "DevExpressGrid\DevExpressGrid.csproj", "{2F81D54D-2EE3-4930-B25D-319FCB647F8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2A1DA22A-2C75-4540-A146-56090D360E6B}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

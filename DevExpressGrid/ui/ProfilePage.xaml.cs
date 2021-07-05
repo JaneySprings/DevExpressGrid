@@ -1,29 +1,29 @@
-﻿using DevExpressGrid.network;
+﻿using DevExpressGrid.Network;
 using System;
-using DevExpressGrid.domain;
+using DevExpressGrid.Domain;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using DevExpressGrid.extensions;
+using DevExpressGrid.Extensions;
 
-namespace DevExpressGrid.ui {
+namespace DevExpressGrid.UI {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProfilePage : ContentPage {
-        private ProfileViewModel viewModel;
-        private IResultListener listener;
-        
+        private readonly ProfileViewModel viewModel;
+        private readonly IResultListener listener;
+
 
         public ProfilePage(EmployeeItem item, IResultListener listener) {
             InitializeComponent();
 
-            viewModel = new ProfileViewModel(item);
-            BindingContext = viewModel;
+            this.viewModel = new ProfileViewModel(item);
+            BindingContext = this.viewModel;
 
             this.listener = listener;
         }
 
 
         private void Button_Clicked(object sender, EventArgs e) {
-            listener.onPageResult(viewModel.Item, ResultApiCodes.Delete);
+            this.listener.OnPageResult(this.viewModel.Item, ResultApiCodes.Delete);
             Navigation.PopAsync();
         }
     }
