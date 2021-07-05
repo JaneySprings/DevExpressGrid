@@ -1,6 +1,2 @@
-/DevExpressGrid/bin
-/DevExpressGrid/obj
-/DevExpressGrid.Android/bin
-/DevExpressGrid.Android/obj
-/DevExpressGrid.iOS/bin
-/DevExpressGrid.iOS/obj
+[Bb]in/
+[Oo]bj/
